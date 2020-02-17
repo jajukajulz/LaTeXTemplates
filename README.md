@@ -1,2 +1,2 @@
 # LatexTemplates
-Latex Templates
+Latex Templates for University of Cape Town assignments and submissions.
