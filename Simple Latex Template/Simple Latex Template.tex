@@ -1,0 +1,145 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Simple Latex Template
+%
+% This template was downloaded from http://www.LaTeXTemplates.com and tailored by Julian Kanjere (juliankanjere.com)
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-
+% 
+% Instructions for using this template:
+% This template page is capable of being compiled as is.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATION
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{article} % list options between brackets
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+\usepackage{mathpazo} % Palatino font
+\usepackage{titlepic}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{lipsum}  
+% type user-defined commands here
+
+
+
+\begin{document}
+	
+	%----------------------------------------------------------------------------------------
+	%	TITLE PAGE
+	%----------------------------------------------------------------------------------------
+	
+	\begin{titlepage} % Suppresses displaying the page number on the title page and the subsequent page counts as page 1
+		\newcommand{\HRule}{\rule{\linewidth}{0.2mm}} % Defines a new command for horizontal lines, change thickness here
+		
+		\center % Centre everything on the page
+		
+		%------------------------------------------------
+		%	Headings
+		%------------------------------------------------
+		
+		% \textsc{\LARGE [Organisation Name Here]}\\[0.2cm] % Main heading such as the name of your organisation
+		
+		%------------------------------------------------
+		%	Logo
+		%------------------------------------------------
+
+		% \includegraphics[width=0.3\textwidth]{Images/sample_image}\\[0.2cm] % Include an organisation logo - this will require the graphicx package
+		
+		%------------------------------------------------
+		%	Title
+		%------------------------------------------------
+		
+		
+		{\huge\bfseries [Title Here, up to 12 Words, on One to Two Lines] }\\[0.4cm] % Title of your document
+		
+		
+		%------------------------------------------------
+		%	Author(s)
+		%------------------------------------------------
+		
+		% If you don't want a supervisor, uncomment the two lines below and comment the code above
+		{\large\textit{[Name and Surname Here]}}\\ % Name and Surname
+		\textsc{[Email Address or Website Here]} \\[0.5cm] % Email Address or Website
+		
+		%------------------------------------------------
+		%	Date
+		%------------------------------------------------
+		
+		{\large\ \today} % Date, change the \today to a set date if you want to be precise
+		
+		\HRule\\[0.5cm]
+		
+	
+		%------------------------------------------------
+		%	Word Count
+		%------------------------------------------------
+		
+		% \vfill  % Position the Word Count 3/4 down the remaining page
+		
+	%	{\large\ Word Count: } 
+		
+		
+		%----------------------------------------------------------------------------------------
+		
+		
+	\end{titlepage}
+	
+	%----------------------------------------------------------------------------------------
+
+	
+	\begin{abstract}
+		\lipsum[1-1]  \\ % \lipsum[1-1] will only print lorem ipsum paragraph 1.
+		% \lipsum[2-4] \\
+		 
+
+		{{\it keywords:  [REPLACE WITH KEYWORDS]}}
+	\end{abstract}
+
+	\pagebreak
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\tableofcontents
+	\pagebreak
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\section{[Heading 1]}    	 		% chapter 1
+	\lipsum[1-1]\\
+	
+	\subsection{[Subheading 1]}
+	
+	\lipsum[2-4] % will print lorem ipsum paragraph 2 to 4. \\
+	\begin{itemize}
+		\item [Reference 1]
+		\item [Reference 2]
+		\item [Reference 3]
+	\end{itemize}
+	
+	\subsection{[Subheading 2]}
+	\lipsum[2-4] % will print lorem ipsum paragraph 2 to 4. \\ 
+	
+	\subsection{[Subheading 3]}
+	\lipsum[2-4] % will print lorem ipsum paragraph 2 to 4. \\
+	
+	\subsection{[Subheading 4]}
+	\lipsum[1-1] \\
+	
+	\subsection{References}
+	\begin{itemize}
+		\item [Reference 1]
+		\item [Reference 2]
+		\item [Reference 3]
+	\end{itemize}
+	
+\end{document}
