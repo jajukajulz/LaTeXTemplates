@@ -15,7 +15,7 @@
 \usepackage{enumitem}
 \setlist{nosep} % Removes too much vertical spacing in lists
 \usepackage{booktabs}           % makes tables look good
-\usepackage{fancyhdr}           % For page number in the upper right (required) and other running headers(optional)
+\usepackage{fancyhdr}           % Creating headers and footers in Latex can be done by using the package fancyhdr. Also for page number in the upper right (required) and other running headers(optional)
 \usepackage{setspace}           % For double-spacing (required)
 \usepackage{titlesec}           % For keeping chapter/chapter titles single-spaced
 \usepackage{etoolbox}           % For the flag determining if front matter goes into the TOC
@@ -35,17 +35,33 @@
 % Header height (to avoid fancyhdr error)
 \setlength{\headheight}{13.6pt}
 
+% There are seven letters you need to know before you can define your own header/footer:
+
+% E: Even page
+% O: Odd page
+% L: Left field
+% C: Center field
+% R: Right field
+% H: Header
+% F: Footer
+
+% \fancyhead[CO,CE]{---Draft---}
+% \fancyfoot[C]{Confidential}
+% \fancyfoot[RO, LE] {\thepage}
+
 % Header formatting for regular pages
 \fancyhf{}
 \fancyhead[L]{\it\small\leftmark}
 \fancyhead[R]{\small\thepage}
 
 % Header formatting for chapter title pages
-\fancypagestyle{plain}{%
-  \fancyhf{}
-  \fancyhead[R]{\small\thepage}
-  \renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{ % switch to the plainpage style, thus ignoring the page style currently in effect.
+  \fancyhf{} % clear all header and footer fields
+  \fancyhead[R]{\small\thepage} %page number on right
+  \renewcommand{\headrulewidth}{0pt} %make the decorative line in the header disappear by using 0pt or make it thicker with 0.6pt
 }
+
+% Fancy LaTeX chapter styles https://texblog.org/2012/07/03/fancy-latex-chapter-styles/
 
 % Formatting of chapter and chapter titles: keep them single-spaced in the midst of double-spaced text
 
@@ -64,6 +80,10 @@
 \newtoggle{fulltoc}
 \toggletrue{fulltoc}  % Change to \togglefalse{fulltoc} to remove front matter
 \renewcommand{\contentsname}{Table of Contents}
+
+% Custom abbreviations environment
+% \newcommand{\abbrlabel}[1]{\makebox[3cm][l]{\textbf{#1}\ \dotfill}}
+% \newenvironment{abbreviations}{\begin{list}{}{\renewcommand{\makelabel}{\abbrlabel}}}{\end{list}}
 
 \endinput
 %%
