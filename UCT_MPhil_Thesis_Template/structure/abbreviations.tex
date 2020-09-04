@@ -1,0 +1,14 @@
+%TC:ignore
+% Custom abbreviations environment
+\newcommand{\abbrlabel}[1]{\makebox[3cm][l]{\textbf{#1}\ \dotfill}}
+\newenvironment{abbreviations}{\begin{list}{}{\renewcommand{\makelabel}{\abbrlabel}}}{\end{list}}
+
+\chapter*{\centerline{Abbreviations and Acronyms}}
+\markboth{\MakeUppercase{Abbreviations and Acronyms}}{}
+\iftoggle{fulltoc}{
+  \addcontentsline{toc}{chapter}{Abbreviations and Acronyms}
+}{}
+\begin{abbreviations}
+	\item [AI] Artificial Intelligence
+\end{abbreviations}
+%TC:endignore
