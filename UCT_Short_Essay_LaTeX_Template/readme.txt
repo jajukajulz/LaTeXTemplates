@@ -1,3 +1,3 @@
-Latex on MAC OS
+LaTeX on MAC OS
 TEXStudio
 TEXLive Utility (Package Manager)
