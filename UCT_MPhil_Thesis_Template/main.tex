@@ -1,15 +1,141 @@
-\documentclass[12pt,oneside]{book}  % Remove draft option to show figures (for final draft), otherwise keep for faster production
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% UCT MPhil Thesis Template (LaTeX)
+%
+% This template was downloaded from https://www.overleaf.com/latex/templates/university-of-rochester-masters-slash-phd-thesis-template/bwkpcxzdysky
+% University of Rochester Master's/PhD Thesis Template (Author: Venkat)
+% Adapted by Julian Kanjere (juliankanjere.com).
+%
+% Instructions for using this template:
+% This template page is capable of being compiled as is.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+﻿\documentclass[12pt,a4paper]{report} % Remove draft option to show figures (for final draft), otherwise keep for faster production
+
+%\documentclass[12pt,oneside]{book}  % Remove draft option to show figures (for final draft), otherwise keep for faster production
+
+% LaTeX knows three standard font sizes:
+% 10pt (default)
+% 11pt
+% 12pt
+
+
+% the document should be presented on single-sided a4 paper and typeset in a double-spaced size 10-12 font;
+% the left-hand margin should be at least 1.5 inches (4cm) to allow for binding;
+% the other three margins should be at least 1 inch (2.5cm).
+\usepackage[left=1.5in, right=1in, top=1in, bottom=1in, includefoot, headheight=13.6pt]{geometry}
+
+\setcounter{secnumdepth}{3} % default value for 'report' class is "2". When set to 3, you can reference subsubsection
+
+\listfiles % List packages used in .log file
+
+%On Overleaf, texcount utility to count the words in the project's main file and any files imported into your project's main file via \include and \input.
+
+
+% common packages in Latex
+% graphicx: Indispensable when working with figures/graphs.
+% subfig: Controlling arrangement of several figures (e.g. 2×2 matrix)
+% minitoc: Adds mini table of contents to every chapter
+% nomencl: Generate and format a nomenclature
+% listings: Source code printer for LaTeX
+% babel: Multilingual package for standard document classes
+% fancyhdr: Controlling header and footer
+% hyperref: Hypertext links for LaTeX
+
+%Indentation
+%By default, LaTeX does not indent the first paragraph of a section or a chapter. The size of the subsequent paragraph indents is determined by \parindent.
+%If you want to create a non-indented paragraph, like the second one in the example, put the command \noindent at the beginning of it. If you want the whole document not to be indented, set the indentation length to zero with \setlength{\parindent}{0pt}.
+%On the other side, if you want to indent a paragraph that is not indented you can use \indent right above it. It should be noted that this command will only have an effect when \parindent is set to zero. Also, the default value for \parindent in one-column documents is 15pt when the default text size is 10pt , 17pt for 11pt , and 1.5em for 12pt .
+\setlength{\parindent}{1.5em}
+%\setlength{\parskip}{1em} %\parskip, this determines the space between a paragraph and the preceding text.
+
 
 \usepackage{uorthesis}  % Loads the LaTeX style package
+
+% Biber. This is the new engine to read .bib files. BibTex is the old engine. Make sure it is installed.
 \usepackage[backend=biber, style=authoryear]{biblatex}
-\addbibresource{references.bib}
+\addbibresource{references.bib} % Note that when using \addbibresource (which was introduced in biblatex v1.2), "ﬁles must be speciﬁed with their full name, including the extension"
+%tlmgr install biber or install from TexLive
 \usepackage{uorbib}
 
 % Put custom packages to be loaded here
 % \usepackage{linguex}  % For linguistic examples
-% \usepackage{tikz}     % For drawing
+\usepackage{tikz}     % For drawing
+\usepackage{epigraph}
+\usepackage{hyperref}
+\usepackage{lipsum}
+\usepackage{multirow} % multi-row, usage: %\multirow{number rows}{width}{text}
+\usetikzlibrary{shapes.geometric, arrows}
+\usepackage[figuresright]{rotating}	%Allows large tables to be rotated to landscape.
+\usepackage{amsmath} %allows environment align etc
+%
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\xmark}{\ding{55}}%
+%
+\usepackage{listings, lstautogobble} %The listings package supports highlighting of all the most common languages. The autogobble option gobbles the spaces in the whole listing according to the number of spaces in the first line
+
+%word count in latex, You need to choose XeLaTeX as compiler in your editor for this feature.
+%\usepackage{xesearch}
+%\newcounter{words}
+%\newenvironment{counted}{%
+%	\setcounter{words}{0}
+%	\SearchList!{wordcount}{\stepcounter{words}}
+%	{a?,b?,c?,d?,e?,f?,g?,h?,i?,j?,k?,l?,m?,
+%		n?,o?,p?,q?,r?,s?,t?,u?,v?,w?,x?,y?,z?}
+%	\UndoBoundary{'}
+%	\SearchOrder{p;}}{%
+%	\StopSearching}
+
+\lstset{language=Java,
+	keywordstyle=\color{blue},
+	%basicstyle=\scriptsize\ttfamily,
+	basicstyle=\footnotesize\tt, %basicstyle=\small\tt,
+	%commentstyle=\ttfamily\itshape\color{gray},
+	%commentstyle=\color[rgb]{0.13,0.54,0.13}, %green
+	commentstyle=\color{green},
+	%stringstyle=\ttfamily,
+	showstringspaces=false,
+	breaklines=true,
+	frameround=ffff,
+	frame=single,
+	rulecolor=\color{black},
+	autogobble=true,
+	morekeywords={
+	struct,
+	address,
+	payable,
+	event,
+	uint,
+	indexed,
+	public,
+	function,
+	emit,
+	return,
+	string,
+	memory,
+	returns,
+	msg.sender,
+	},
+}
+
+
+%Create a new type of list called checkboxlist, which has two levels of nesting and is based on itemize. Each label within a checkboxlist is set as $\square$, at both levels. amssymb is Math symbols
+\usepackage{enumitem,amssymb}
+\newlist{checkboxlist}{itemize}{2}
+\setlist[checkboxlist]{label=$\square$}
+
+
+%Create a new type of list called radiobuttonlist, which has two levels of nesting and is based on itemize. Each label within a radiobuttonlist is set as $circle$, at both levels.
+\newlist{radiobuttonlist}{itemize}{2}
+\setlist[radiobuttonlist]{label=$\bigcirc$}
+
+\usepackage{multicol}
+\usepackage{longtable} %multipage tables
+
 
 \begin{document}
+
 
 % Title page
 \include{structure/title}
@@ -19,7 +145,17 @@
 \pagestyle{fancy}
 \pagenumbering{roman}
 \setcounter{page}{2}
-\doublespacing
+
+%spacing Normally the lines are not spread, so the default line spread factor is 1.
+
+%\singlespacing
+\onehalfspacing
+%\doublespacing
+
+
+%\linespread{1.3} %This equals 1.5 linespacing in Word
+%\linespread{1.6} for "double" line spacing.
+%\setstretch{1.5}
 
 % Dedication (optional)
 \include{structure/dedication}
