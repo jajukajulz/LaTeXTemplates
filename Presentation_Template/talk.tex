@@ -1,0 +1,240 @@
+%
+% This is a borrowed LaTeX template file for presenations. Sourced from 
+% Co-Pierre Georg at University of Cape Town and adpated by Julian Kanjere
+%----------------------------------------------------------------------------
+%
+\documentclass[xcolor=dvipsnames,10pt]{beamer}
+%
+%----------------------------------------------------------------------------
+\mode<presentation>
+{
+	\usetheme{Madrid}
+%Boadilla
+%Copenhagen
+%Frankfurt
+%Luebeck
+%Madrid
+%Warsaw
+}
+\useinnertheme{rectangles}
+\setbeamertemplate{itemize subitem}[triangle]
+\setbeamertemplate{itemize subsubitem}{$\bullet$}
+\setbeamertemplate{navigation symbols}{}
+%----------------------------------------------------------------------------
+% PACKAGES
+%----------------------------------------------------------------------------
+\usepackage{
+  etex,
+  pst-all,
+  graphicx,
+  url,
+  amsmath,
+  amssymb,
+  colortbl,
+  hyperref,
+  booktabs,
+  longtable
+}
+
+\usepackage[utf8]{inputenc}
+\usepackage[authoryear,sort&compress,round]{natbib}
+%\usepackage{booktabs} 																			CS
+%\usepackage{multirow} 																			CS
+%----------------------------------------------------------------------------
+% SETTINGS
+%----------------------------------------------------------------------------
+\psset{unit=0.75mm}
+
+%----------------------------------------------------------------------------
+%
+\input{header}
+%
+%----------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------
+%
+\begin{document}
+%
+%----------------------------------------------------------------------------
+%\renewcommand{\inserttotalframenumber}{36}
+
+\author[Author1Surname/Author2Surname/Author3Surname]{Author1\_Name Author1\_Surname\thanks{Author1 affiliation e.g. University of Cape Town} \quad Author2\_Name Author2\_Surname\thanks{Author2 affiliation} \quad Author3\_Name Author3\_Surname\thanks{Author3 affiliation}}
+\title[Paper Title]{Paper Title\footnote{The views expressed are not necessarily those of XYZ.}}
+\date[Name of Conference, \today]{\today}
+
+%----------------------------------------------------------------------------
+\begin{frame}
+	\titlepage
+\end{frame}
+
+%----------------------------------------------------------------------------
+\begin{frame}
+	\thispagestyle{empty}
+	\begin{center}
+		{\bf {\Large Section Title}}
+	\end{center}
+\end{frame}
+
+%----------------------------------------------------------------------------
+\begin{frame}{Bank Funding Diversification and Investor Similarity}
+	\setcounter{framenumber}{2}
+
+	
+	\begin{itemize}\itemsep15pt
+		\item Reason for abc is $\ldots$
+		\begin{itemize}\itemsep7pt
+			\item Then subpoint main {\bf and other consideration} to abc
+			
+				\begin{equation}
+				\varphi(x,y) =
+				\begin{cases} 
+					1 & \text{if $|I(x,y) - \overline{I(x,y)}|> \mathit{JND}_{\mathrm{ST}}(x,y)$}, \\
+					0 & \text{otherwise}
+				\end{cases}
+			\end{equation}
+		
+		\end{itemize}\pause
+		\item Another point
+		\begin{itemize}\itemsep7pt
+			\item {\em ``a quote from someone''} (Author (2018))\\
+			~\hfill $\rightarrow$ Resulting thought?
+			\item Another point\\
+			~\hfill $\rightarrow$ Another resulting thought?
+		\end{itemize}\pause
+	\end{itemize}
+\end{frame}
+
+%----------------------------------------------------------------------------
+
+\begin{frame}{Title Slide}
+	\begin{itemize}\itemsep15pt
+		\item Two images in same line\\
+		~\hfill $\rightarrow$ and a right arrow{\bf identical}
+	\end{itemize}
+	~\\
+	\begin{minipage}{0.475\textwidth}
+		\begin{figure}[h]
+			\includegraphics[width=0.8\textwidth]{Figures/uct.png}
+		\end{figure}
+	\end{minipage}\begin{minipage}{0.05\textwidth}
+		~ \pause
+	\end{minipage}\begin{minipage}{0.475\textwidth}
+		\begin{figure}[h]
+			\includegraphics[width=0.8\textwidth]{Figures/uct.png}
+		\end{figure}
+	\end{minipage}
+	~\\
+	~\\
+	\begin{itemize}\itemsep10pt
+		\item Follow up point a
+		\item {\bf However}, Follow up point b
+	\end{itemize}
+	~\hfill $\rightarrow$ Summary point
+\end{frame}
+
+%----------------------------------------------------------------------------
+
+\begin{frame}
+	\thispagestyle{empty}
+	\begin{center}
+		{\bf {\Large Section Title}}
+	\end{center}
+\end{frame}
+
+
+%----------------------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Title Slide}
+	\setcounter{framenumber}{23}
+	{\bf H2}: The average similarity of the funds investing in an issuer increases the issuer’s funding liquidity risk. The issuer cannot substitute the loss of funding from similar investors in a crisis.\\
+	~\\
+	\begin{itemize}\itemsep15pt
+		\item Example formula:
+		\[ Similarity_{it}=\sum_{f}w_{fit}Similarity_{fit} \]
+		\item Example formula 2:
+		\begin{eqnarray*}
+			\textsf{log}(vol_{it}/vol_{it-1}) & = & \beta_{i}+\beta_{t}+\gamma_{1}Similarity_{it-1} +\gamma_{2} Similarity_{it-1} \times Crisis_{t}\\
+			&  & +\delta Controls_{it-1} + \varepsilon_{it},
+		\end{eqnarray*}
+		where $\beta_{i}$ are abc, $\beta_{t}$ are abc, $Crisis_{t}$ is an abc.)
+	\end{itemize}
+\end{frame}
+
+%----------------------------------------------------------------------------
+
+\begin{frame}[c]\frametitle{Title Slide}
+	Let $S_i^{\mathcal{G}}$ be number of $i$'s neighbors active in  network $\mathcal{G}$.
+	
+
+	  	\begin{equation}
+	  		 u_i(\boldsymbol{a}) =
+	  		  \begin{cases} 
+	  		  	\pi(S_{i}^R,S_{i}^C) - c(w_i) & \text{if } a_i^R = a_i^C =1 \\
+				0 & \text{otherwise} 
+			\end{cases}
+		\end{equation}
+	
+
+	
+	\structure{Assumption}: key assumption here.
+	
+	{\footnotesize Cf. [Author, YYYY], [Author et al., YYYY], [Author and Author, YYYY].}    \pause
+	
+	
+	\begin{block}{Block to appear as you scroll}
+		\begin{enumerate}
+			\item \textbf{Item 1:} \\ Description of item. \\ $\implies$ $a_i^R=1$ requires abc to be true. \pause \footnotemark[1]
+			\item \textbf{Item 2:} \\ Description of item.  \\ $\implies$ $a_i^C=1$ requires abc to be true.\footnotemark[2] \pause
+			\item \textbf{Item 3:}\\ Description of item. \\ $\implies$ $a_i^R=1$ or $a_i^C=1$  requires abc to be true. \footnotemark[2]
+		\end{enumerate}
+	\end{block}
+	
+	\footnotetext[1]{Example footnote 1.}
+	\footnotetext[2]{Example footnote 2.}
+	
+\end{frame}
+
+%----------------------------------------------------------------------------
+
+\begin{frame}
+	\thispagestyle{empty}
+	\begin{center}
+		{\bf {\Large Section Title}}
+	\end{center}
+\end{frame}
+
+%----------------------------------------------------------------------------
+
+\begin{frame}
+	\frametitle{Title Slide}
+	\begin{figure}[h]
+		\begin{center}
+			\includegraphics[width=0.6\textwidth]{Figures/uct.png}
+		\end{center}
+	\end{figure}
+\end{frame}
+
+%----------------------------------------------------------------------------
+
+\begin{frame}{Conclusion}
+	\begin{itemize}\itemsep15pt
+		\item Example point 1
+		\item  Example point 2
+		\item  Example point 3
+		\begin{itemize}\itemsep5pt
+			\item  Example subpoint 1
+			\item Example subpoint 2
+		\end{itemize}
+		\item Example  point 3
+	\end{itemize}
+	\pause
+	~\hfill {\bf Thank you!}
+\end{frame}
+
+%----------------------------------------------------------------------------
+%
+\end{document}
+%
+%----------------------------------------------------------------------------
