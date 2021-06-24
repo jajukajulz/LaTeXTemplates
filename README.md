@@ -1,5 +1,5 @@
 # LaTeXTemplates
-LaTeX Templates for various reports and assignments.
+LaTeX Templates for various reports, assignments and presentations.
 
 ## Template PDF's
 Links to PDFs generated from the templates:
@@ -7,9 +7,12 @@ Links to PDFs generated from the templates:
 - [Simple LaTeX Template PDF](../master/Simple_Latex_Template/Simple_LaTeX_Template.pdf)
 - [UCT MPhil Thesis Template PDF](../master/UCT_MPhil_Thesis_Template/main.pdf)*
 - [UCT MPhil Thesis Abstract Template PDF](../master/UCT_MPhil_Thesis_Template/main_abstract.pdf)*
+- [Lecture Notes Template PDF](../master/Lecture_Notes_Template/main.pdf)**
+- [Presentation Template (Beamer) PDF](../master/Presentation_Template/talk.pdf)
 
-UCT MPhil Thesis Template is adapted from this [University of Rochester Master's/PhD Thesis Template](https://www.overleaf.com/latex/templates/university-of-rochester-masters-slash-phd-thesis-template/bwkpcxzdysky) on Overleaf.
+*UCT MPhil Thesis Template is adapted from this [University of Rochester Master's/PhD Thesis Template](https://www.overleaf.com/latex/templates/university-of-rochester-masters-slash-phd-thesis-template/bwkpcxzdysky) on Overleaf.
 
+**Lecture Notes Template courtesy of UC Berkeley EECS dept. 
 
 ## Requirements (Writing Environment)
 In order to use these templates, an environment with the following is required (or else upload to [Overleaf](https://www.overleaf.com)):
