@@ -1,0 +1,107 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University of Cape Town Short Essay template
+% LaTeX Template
+%
+% This template was downloaded from http://www.LaTeXTemplates.com and tailored to Nick Fitzhenry's UCT Short Essay template (MS Word) by Julian Kanjere (juliankanjere.com)
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+% Instructions for using this template:
+% This template page is capable of being compiled as is.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATION
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{article} % list options between brackets
+
+\usepackage[utf8]{inputenc} % Support for international characters
+\usepackage[T1]{fontenc} % Support for encoding international characters
+
+\usepackage{mathpazo} % Palatino font
+\usepackage{titlepic}
+\usepackage{graphicx} % For rendering logos
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{lipsum}  % Generate dummy text (lorem ipsum) in your document
+
+% Add user-defined commands here
+
+
+
+\begin{document}
+	
+	%----------------------------------------------------------------------------------------
+	%	TITLE PAGE
+	%----------------------------------------------------------------------------------------
+	
+	\begin{titlepage} % Suppress displaying the page number on the title page. Numbering starts at 1 for subsequent pages.
+		\newcommand{\HRule}{\rule{\linewidth}{0.2mm}} % Defines a new command for horizontal lines, change thickness here
+		
+		\center % Centre everything on the page
+		
+		%------------------------------------------------
+		%	Headings
+		%------------------------------------------------
+		\textsc{\LARGE University of Cape Town}\\[0.2cm] % Name of your university
+		
+		%------------------------------------------------
+		%	Logo
+		%------------------------------------------------
+		\includegraphics[width=0.3\textwidth]{Images/uct}\\[0.2cm] % UCT Logo
+		
+		%------------------------------------------------
+		%	Title
+		%------------------------------------------------
+		{\huge\bfseries [Title Here, up to 12 Words, on One to Two Lines] }\\[0.4cm] % Document Title
+		
+		\textsc{\Large [Course Name]}\\[0.5cm] % Course name
+		
+		%------------------------------------------------
+		%	Author
+		%------------------------------------------------
+		{\large\textit{[Name and Surname]}}\\ % Name and Surname
+		\textsc{[Student Number]} \\[0.5cm] % Student Number
+		
+		%------------------------------------------------
+		%	Date
+		%------------------------------------------------
+		{\large\ \today} % Date, change the \today to a set date if you want to be precise
+		
+		%------------------------------------------------
+		%	Abstract
+		%------------------------------------------------
+		\HRule\\[0.5cm]
+		
+			
+		\begin{abstract}
+			\lipsum[1-1]  \\ % \lipsum[1-1] will only print lorem ipsum paragraph 1.
+			
+			
+			{{\it keywords:  [REPLACE WITH KEYWORDS]}}
+		\end{abstract}
+	
+		\HRule\\[0.4cm]
+		%------------------------------------------------
+		%	Word Count
+		%------------------------------------------------
+		
+		% \vfill  % Position the Word Count 3/4 down the remaining page
+		
+		{\large\ Word Count: } 
+		
+		
+		%----------------------------------------------------------------------------------------
+		
+		
+	\end{titlepage}
+	
+	%----------------------------------------------------------------------------------------
+
+\end{document}
